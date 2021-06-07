@@ -197,27 +197,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 break;
 
 
-            case R.id.B_schools:
+            case R.id.B_art_gallery:
                 mMap.clear();
-                String school = "school";
-                url = getUrl(latitude, longitude, school);
+                String art_gallery = "art_galleries";
+                url = getUrl(latitude, longitude, art_gallery);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Schools", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MapsActivity.this, "Showing Nearby art galleries", Toast.LENGTH_SHORT).show();
                 break;
 
 
-            case R.id.B_restaurants:
+            case R.id.B_museum:
                 mMap.clear();
-                String resturant = "restuarant";
-                url = getUrl(latitude, longitude, resturant);
+                String museum = "museums";
+                url = getUrl(latitude, longitude, museum);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Restaurants", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MapsActivity.this, "Showing Nearby Museums", Toast.LENGTH_SHORT).show();
                 break;
 
 
@@ -249,12 +249,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private String getUrl(double latitude , double longitude , String nearbyPlace)
     {
 
-        StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
+        StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/textsearch/json?");
         googlePlaceUrl.append("location="+latitude+","+longitude);
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
         googlePlaceUrl.append("&type="+nearbyPlace);
         googlePlaceUrl.append("&sensor=true");
-        googlePlaceUrl.append("&key="+getString(R.string.google_maps_key));
+        googlePlaceUrl.append("&key="+"AIzaSyBeemc49xhWBHxOXrLS8scCe5WzgDqW6TU");
 
         Log.d("MapsActivity", "url = "+googlePlaceUrl.toString());
 

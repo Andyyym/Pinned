@@ -36,6 +36,20 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
         HashMap<String,String> directionsList = null;
         DataParser parser = new DataParser();
         directionsList = parser.parseDirections(s);
+        displayDirection[directionsList];
+    }
+
+    public void displayDirection(String[] directionsList){
+        int count = directionsList.length;
+        for (int i = 0;i<count;i++){
+            PolylineOptions options = new PolylineOptions();
+            options.color[Color.RED];
+            options.width[10];
+            options.addAll[PolyUtil.decode(directionsList[i])];
+
+            mMap.addPolyline(options);
+
+        }
 
     }
 

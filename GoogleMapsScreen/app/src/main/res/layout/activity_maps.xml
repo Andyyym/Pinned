@@ -49,21 +49,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
-                android:text="bars" />
-
-            <Button
-                android:id="@+id/B_art_gallery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onClick"
-                android:text="Art Gallery" />
+                android:text="Tourist Attractions" />
 
             <Button
                 android:id="@+id/B_museum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
-                android:text="Museum" />
+                android:text="Museums" />
 
             <Button
                 android:id="@+id/B_to"

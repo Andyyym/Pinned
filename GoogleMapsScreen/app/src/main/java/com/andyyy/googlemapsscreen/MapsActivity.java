@@ -153,6 +153,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         switch(v.getId())
         {
             case R.id.B_search:
+                mMap.clear();
                 EditText tf_location =  findViewById(R.id.TF_location);
                 String location = tf_location.getText().toString();
                 List<Address> addressList;
@@ -187,31 +188,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             case R.id.B_bar:
                 mMap.clear();
-                String bar = "bars";
-                String url = getUrl(latitude, longitude, bar);
+                String tourist_attraction = "tourist_attraction";
+                String url = getUrl(latitude, longitude, tourist_attraction);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby bars", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MapsActivity.this, "Showing Nearby Tourist Attraction", Toast.LENGTH_SHORT).show();
                 break;
-
-
-            case R.id.B_art_gallery:
-                mMap.clear();
-                String art_gallery = "art_galleries";
-                url = getUrl(latitude, longitude, art_gallery);
-                dataTransfer[0] = mMap;
-                dataTransfer[1] = url;
-
-                getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby art galleries", Toast.LENGTH_SHORT).show();
-                break;
-
 
             case R.id.B_museum:
                 mMap.clear();
-                String museum = "museums";
+                String museum = "museum";
                 url = getUrl(latitude, longitude, museum);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;

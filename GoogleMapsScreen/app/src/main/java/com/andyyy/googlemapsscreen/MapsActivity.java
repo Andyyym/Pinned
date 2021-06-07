@@ -228,7 +228,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         StringBuilder googleDirectionsUrl = new StringBuilder("https://maps.googleapis.com/maps/api/directions/json?");
         googleDirectionsUrl.append("origin= "+latitude + "," + longitude);
         googleDirectionsUrl.append("&destination= "+ end_longitude + "," + end_latitude);
-        googleDirectionsUrl.append("&key= " +"AIzaSyAxxE-Q9hAOj9V1pLAtIS0sm7tJF1zXt3U");
+        googleDirectionsUrl.append("&key= " +"AIzaSyBeemc49xhWBHxOXrLS8scCe5WzgDqW6TU");
 
         return googleDirectionsUrl.toString();
     }

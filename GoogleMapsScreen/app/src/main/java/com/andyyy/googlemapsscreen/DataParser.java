@@ -3,6 +3,8 @@ package com.andyyy.googlemapsscreen;
 import java.util.HashMap;
 import android.util.Log;
 
+import com.google.gson.JsonObject;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,6 +14,17 @@ import java.util.List;
 
 
 public class DataParser {
+
+    private  HashMap<String,String> getDuration(JSONArray googleDirectionsJson)
+    {
+        HashMap<String,String> googleDirectonsMap = new HashMap<>();
+        String duration = "";
+        String distance = "";
+
+        Log.d("json response", googleDirectionsJson.toString());
+
+        return  googleDirectonsMap;
+    }
 
     private HashMap<String, String> getPlace(JSONObject googlePlaceJson)
     {
@@ -84,5 +97,14 @@ public class DataParser {
             e.printStackTrace();
         }
         return getPlaces(jsonArray);
+    }
+
+    public HashMap<String,String> parseDirections(String jsonData)
+    {
+        JSONArray jsonArray = null;
+        JSONObject jsonObject = null;
+
+
+        return getDuration(jsonArray);
     }
 }

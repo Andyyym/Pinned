@@ -45,11 +45,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/B_hos"
+                android:id="@+id/B_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
-                android:text="Hospitals" />
+                android:text="bars" />
 
             <Button
                 android:id="@+id/B_schools"

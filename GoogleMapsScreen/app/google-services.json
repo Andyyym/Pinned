@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "500496489882",
+    "project_id": "opsc7311-poe-ab7be",
+    "storage_bucket": "opsc7311-poe-ab7be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500496489882:android:874fba2494eb914242ae23",
+        "android_client_info": {
+          "package_name": "com.andyyy.googlemapsscreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500496489882-nqseh6h0kpmti9m8ci94q5vflhemat22.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andyyy.googlemapsscreen",
+            "certificate_hash": "8324195d4233dd6006cda945b88388877db780d7"
+          }
+        },
+        {
+          "client_id": "500496489882-pge7pkgbvlopm729vac02ofd4jeemrb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIJtBOa7F6U0lC5w0W1CTKviBF2P9lHVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500496489882-pge7pkgbvlopm729vac02ofd4jeemrb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

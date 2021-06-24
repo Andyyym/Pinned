@@ -15,9 +15,9 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
-//import com.google.firebase.auth.AuthResult;
-//import com.google.firebase.auth.FirebaseAuth;
-//import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterLogin extends AppCompatActivity {
 
@@ -25,8 +25,8 @@ public class RegisterLogin extends AppCompatActivity {
     //CREATE VARIABLE
     EditText email, password;
     Button login, register, signout;
-    //private FirebaseAuth mAuth;
-    //FirebaseUser currentUser;
+    private FirebaseAuth mAuth;
+    FirebaseUser currentUser;
     CardView loginCardView;
 
 
@@ -35,14 +35,14 @@ public class RegisterLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         //SET VARIABLES
         email = findViewById(R.id.et_email);
         password = findViewById(R.id.et_password);
         login = findViewById(R.id.btnLogin);
         register = findViewById(R.id.btnRegister);
-       // currentUser = mAuth.getCurrentUser();
+        currentUser = mAuth.getCurrentUser();
         loginCardView = findViewById(R.id.cardView_login);
         signout = findViewById(R.id.btnSignOut);
 
@@ -59,7 +59,7 @@ public class RegisterLogin extends AppCompatActivity {
                 String enteredEmail = email.getText().toString().trim();
                 String enteredPassword = password.getText().toString().trim();
                 //CREATES FIREBASE USER
-                /*mAuth.createUserWithEmailAndPassword(enteredEmail, enteredPassword)
+                mAuth.createUserWithEmailAndPassword(enteredEmail, enteredPassword)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -95,7 +95,7 @@ public class RegisterLogin extends AppCompatActivity {
 
 
         });
-*/
+
         //LOGIN BUTTON
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,7 +142,7 @@ public class RegisterLogin extends AppCompatActivity {
                     {
                         Context context = RegisterLogin.this;
                         Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }*/
+                    }
                 });
 
             }
@@ -152,7 +152,7 @@ public class RegisterLogin extends AppCompatActivity {
                 signout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // mAuth.signOut();
+                         mAuth.signOut();
 
                         Context context = RegisterLogin.this;
                         CharSequence text = "YOU HAVE BEEN SIGNED OUT!";
